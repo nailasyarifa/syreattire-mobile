@@ -41,3 +41,30 @@ menu.dart : - Scaffold
 - Memindah dan modifikasi MyHomePage dari main.dart.
 - Mengubah bagian colorSceheme menjadi colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo), pada main.dart
 - Membuat widget stateless baru yang berfungsi untuk menampilkan card.
+
+
+# Tugas 8 : Flutter Navigation, Layouts, Forms, and Input Elements
+
+## 1.  Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan? 
+'const' pada kode Flutter digunakan untuk mendefinisikan nilai yang bersifat konstan, maksudnya nilai tersebut tidak dapat diubah selama runtime. const juga digunakan pada widget atau variabel yang nilainya tidak akan berubah, misalnya teks atau ikon. penggunakan const tidak digunakan pada objek atau widget yang nilainya bisa berubah selama runtime, misalnya data dari input pengguna.
+
+## 2. Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!
+Column digunakan untuk menyusun widget secara vertikal (dari atas ke bawah), misalnya pada form atau daftar item. sedangkan row itu digunakan dan cocok untuk menyusun widget secara horizontal (dari kiri ke kanan), misalnya baris tombol atau ikon di dalam satu baris.
+
+## 3. Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan! 
+Terdapat TextFormField, untuk menerima input teks dari pengguna, dengan masing-masing field yang berbeda (nama dan deskripsi). Juga Form yaitu wadah untuk mengelompokkan beberapa bagian(input) formulir, di sini bisa meletekkan TextFormField untuk meminta jawaban dari user. Saya tidak memakai DropdownButtonFormField, karena pada tugas ini belum di butuhkan. 
+
+## 4. Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+Saya menggunakan ThemeData pada MaterialApp. Penggunaan ThemeData dapat mengatur warna primary serta sekunder yang di pakai pada aplikasi sehingga aplikasi bisa menjadi konsisten. Contoh saya menggunkan 
+
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: const Color(0xFF9b957f), // Warna utama
+           secondary: const Color(0xFF9b957f), // Warna sekunder
+        ),
+
+## 5. Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama. Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru. Selanjutnya membuat sebuah drawer pada aplikasi. Saya menggunakan navigasi sederhana yaitu push dan pop untuk menghandle nya. 
+
+
+
+
