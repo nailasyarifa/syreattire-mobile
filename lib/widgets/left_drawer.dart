@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syreattire/screens/list_itementry.dart';
 import 'package:syreattire/screens/menu.dart';
 import 'package:syreattire/screens/item_entry_form.dart';
 
@@ -60,10 +61,21 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ItemEntryFormPage(),
+                    builder: (context) => const ItemEntryFormPage(),
                   ));
             },
           ),
+          ListTile(
+                leading: const Icon(Icons.add_reaction_rounded),
+                title: const Text('Daftar Item'),
+                onTap: () {
+                    // Route menu ke halaman item
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const ItemEntryPage()),
+                    );
+                },
+            ),
         ],
       ),
     );
